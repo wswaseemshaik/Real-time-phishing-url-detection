@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PhishGuard</title>
+    <style>
+        body {
+            width: 300px;
+            padding: 15px;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .status {
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .active {
+            background-color: #c6f6d5;
+            color: #2f855a;
+        }
+        .stats {
+            background-color: #f7fafc;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        .button {
+            width: 100%;
+            padding: 8px;
+            background-color: #4299e1;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #3182ce;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>PhishGuard</h2>
+    </div>
+    
+    <div class="status active">
+        Protection Active
+    </div>
+    
+    <div class="stats">
+        <div class="stat-item">
+            <span>Sites Checked:</span>
+            <span id="sitesChecked">0</span>
+        </div>
+        <div class="stat-item">
+            <span>Phishing Blocked:</span>
+            <span id="phishingBlocked">0</span>
+        </div>
+    </div>
+    
+    <button class="button" id="clearData">Clear History</button>
+    
+    <div id="stats">
+        <h3>Statistics</h3>
+        <p>Total URLs checked: <span id="total-urls">0</span></p>
+        <p>Phishing URLs detected: <span id="phishing-urls">0</span></p>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html> 
